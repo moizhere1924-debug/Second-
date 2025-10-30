@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main-container{
+            display: grid;
+            grid-template-areas:
+            "header header header header"
+            "sidebar main ad ad"
+            "footer footer footer footer";
+            grid-template-columns: repeat(4,auto);
+            grid-template-rows: auto;
+            gap: 10px;
+            padding: 10px;
+            box-sizing: border-box;            
+            border: 1px solid black;
+            border-radius: 20px;
+        }
+
+
+        .header{
+            background-color: rgb(61, 8, 20);           
+            text-align: center;
+            padding: 40px;
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            grid-area: header;
+            border-radius: 20px;
+            color: white;
+            gap: 100px;
+           
+        }
+        .sidebar {
+            background-color: rgb(223, 214, 167);
+            padding: 10px;
+            grid-area: sidebar;
+            border-radius: 10px;
+          }
+
+       h1{
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-size: 24px;
+            font-weight: bold;            
+            text-transform: uppercase;
+            letter-spacing: 1px;
+
+        }
+        .main{
+            background-color: rgb(223, 214, 167);
+            padding: 10px;
+            grid-area: main;
+            border-radius: 10px;
+            
+        }
+
+        .main p{
+            font-size: large;
+            line-height: 1.5;
+        }
+        .ad{
+            background-color: rgb(223, 214, 167);
+            padding: 10px;
+            grid-area: ad;
+            border-radius: 10px;
+        }
+
+
+        .footer{
+            background-color: rgb(61, 8, 20);
+            text-align: center;
+            padding: 10px;
+            grid-area: footer;
+            border-radius: 20px;
+            color: white;
+            
+        }
+        .main h1{
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-size: 24px;
+            font-weight: bold;
+            text-align: left;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+
+        }
+        .sidebar ul{
+            list-style-type: square;
+            padding-left: 20px;
+            font-size: large;
+            margin-bottom: 300px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        a{
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            font-size:xx-large;
+            ;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <div class="header">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </div>
+     <div class="sidebar">
+        <h1>Menu</h1>
+        <ul>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+        </ul>
+     </div>
+     <div class="main">
+        <h1>Welcome to the Main Content Area</h1>
+        <p>This is where the main content of the page.</p>
+     </div>
+     <div class="ad">
+        <h1>Advertisement</h1>
+        <p>Your Ad Here!</p>
+     </div>
+     <div class="footer">
+        <h1>Footer Information</h1>
+        <p>© 2025 Your Company</p>
+     </div>
+    </div>
+</body>
+</html>
