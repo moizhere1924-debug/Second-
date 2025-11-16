@@ -37,8 +37,3 @@ console.log(`Date of Birth is: ${dateofbirth}`);
 
 let currentyear = prompt("Enter Your Current Year");
 console.log(`Current Year is: ${currentyear}`);
-
-
-
-
-
