@@ -5,15 +5,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .heading{
+            text-align: center;
+            color: black;
+            background-color: lightgray;
+            padding: 10px;
+            height: 500px;
+            width: 400px;
+        }
+        h1{
+            color: rgba(188, 143, 143, 0);
+            background-image: url(images.jpeg);
+            background-position: 25px;
+            background-clip: text;
+            animation: text 3s  linear infinite ;
+        }
+        @keyframes text {
+            0%{
+                background-position: 0px;
+            }
+            100%{
+                background-position: -300px;
+            }
+        }
+    </style>
 </head>
 
 <body>
+<div class="heading">
     <h1>first heading</h1>
     <h2>second heading</h2>
     <h3>third heading</h3>
     <h4>forth heading</h4>
     <h5>fifth heading</h5>
-
+</div>
 
 </body>
 

@@ -4,9 +4,86 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+ <style>
+    body{
+        height: 100vh;
+        width: 100vw;
+        margin: 0;
+        animation: color 2s linear  infinite alternate;
+    }
+    @keyframes color {
+        0%{
+            background-color: lightblue ;
+            color:rgb(0, 0, 0) ;
+        }
+        20%{
+            background-color: lightgoldenrodyellow ;
+            color:rgb(0, 0, 0) ;
+        }
+        40%{
+            background-color: rgb(215, 226, 177) ;
+            color: rgb(0, 0, 0);
+        }
+        60%{
+            background-color: lightcyan ;
+            color: rgb(0, 0, 0);
+        }
+        80%{
+            background-color: lightgreen ;
+            color: rgb(0, 0, 0);
+        }
+        100%{
+            background-color: lightgray ;
+            color: rgb(0, 0, 0);
+        }
+    }
+/* 
+    h1{
+          overflow: hidden;
+        border-right: .15em solid orange;
+        white-space: nowrap;
+        animation: typewriter 3.5s linear forwards, blink-caret .75s step-end ;
+    }
+    @keyframes typewriter {
+        0%{
+            width: 0;
+        }
+        100%{
+            width: 100%;
+        }
+         
+    } */
+    
+    /* .typewriter{
+        overflow: hidden;
+        border-right: .15em solid orange;
+        white-space: nowrap;
+        animation: typewriter 3.5s linear forwards, blink-caret .75s step-end infinite;
+    } */
+
+    input{
+        display: block;
+        margin: 20px auto;
+        padding: 10px;
+        font-size: 16px;
+        border: 2px solid #ccc;
+        border-radius: 4px;
+        width: 300px;
+    }
+ </style>
 </head>
 <body>
-    <p>hello</p>
+
+    
+    <input type="text" id="inputBox1" placeholder="Detect a keypress event">
+    <input type="text" id="inputBox2" placeholder="Display the exact key pressed" >
+    <input type="text" id="inputBox3" placeholder="Display the keyboard code of the key pressed">
+    <input type="text" id="inputBox4" placeholder="Detect when the user holds a key (keydown)">
+    <input type="text" id="inputBox5" placeholder="Detect when user releases a key (keyup)">
+    <input type="text" id="inputBox6" placeholder="Count how many keys user has pressed in total" >
+        
+  
+
     
     <script src="assignment2.js"></script>
 </body>
