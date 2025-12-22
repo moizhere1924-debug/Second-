@@ -418,3 +418,16 @@ inp.addEventListener('keyup',()=>{
     }
 })
 //........................................Question 2.......................................
+
+const inp2=document.getElementById('inputBox7');
+inp.addEventListener('event',()=>{
+    console.log("Current input value:", event.key);
+})
+
+
+
+
+
+
+
+
