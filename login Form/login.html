@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        body {
+            height: 100vh;
+            width: auto;
+            box-sizing: border-box;
+        }
+
+        .container {
+            border: 2px solid black;
+            height: auto;
+            width: 600px;
+            margin-top: 50px;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .login-form {
+            border: 2px solid grey;
+            height: auto;
+            width: auto;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .email-phone {
+            display: flex;
+            justify-content: space-between;
+            width: 520px;
+        }
+
+        .user {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .login-button {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .username-password {
+            display: flex;
+            justify-content: space-between;
+            width: 520px;
+        }
+
+        .password {
+            position: relative;
+        }
+
+        .eyeOpenIcon {
+            position: absolute;
+            right: 7px;
+            top: 27px;
+
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h4>Sign-up Form</h4>
+
+        <div class="login-form">
+            <div class="user">
+                <h5>User Info</h5>
+            </div>
+
+            <div class="username-password">
+
+                <div class="Username">
+                    <label for="username">Username</label><br>
+                    <input type="text" id="username" placeholder="Enter your username" style="width: 250px;">
+
+                    <br><br>
+                </div>
+
+                <div class="password">
+                    <label for="password">Password</label><br>
+                    <span id="eyeIcon" class="eyeOpenIcon"><i class="fa-solid fa-eye-slash"></i></span>
+                    <input type="password" id="Password" minlength="3" maxlength="16" placeholder="Enter your password"
+                        style="width: 250px;">
+
+                </div>
+            </div>
+            <div class="email-phone">
+                <div class="email">
+                    <label for="email">Email</label><br>
+                    <input type="email" id="email" placeholder="Enter your email" style="width: 250px;"><br><br>
+                </div>
+
+                <div class="phone">
+                    <label for="phone">Phone</label><br>
+                    <input type="tel" id="phone" placeholder="Enter your phone number" style="width: 250px;"><br><br>
+                </div>
+            </div>
+
+
+            <div class="login-button">
+                <button id="btn" type="submit" class="btn btn-primary" style="width:500px;">Login</button>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+
+    <script src="/js/bootstrap.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/4.0.0-beta.2/jquery.min.js"
+        integrity="sha512-JobWAqYk5CSjWuVV3mxgS+MmccJqkrBaDhk8SKS1BW+71dJ9gzascwzW85UwGhxiSyR7Pxhu50k+Nl3+o5I49A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+        $(document).ready(() => {
+            $('#btn').click(() => {
+                console.log("Login button clicked.");
+            });
+
+
+            $('#eyeIcon').click(() => {
+                const passwordField = $('#Password');
+                const type = passwordField.attr('type') === 'password' ? 'text' : 'password';
+                passwordField.attr('type', type);
+
+                // Toggle eye icon
+                const eyeIcon = $('#eyeIcon i');
+                if (type === 'text') {
+                    eyeIcon.removeClass('fa-eye-slash').addClass('fa-eye');
+                } else {
+                    eyeIcon.removeClass('fa-eye').addClass('fa-eye-slash');
+                }
+            });
+
+
+
+            console.log("Login form is ready.")
+        });
+
+    </script>
+</body>
+
+</html>
